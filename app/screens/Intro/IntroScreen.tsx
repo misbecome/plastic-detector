@@ -19,23 +19,21 @@ const IntroScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.imageView}>
-        <StickersImage sticker="bike" />
-      </View>
+      <View style={styles.imageView}></View>
       <View style={styles.termsOfUseView}>
-        <Text.H3 style={styles.text}>{t("INTRO_SCREEN_WELCOME")}</Text.H3>
+        <Text.H2 style={styles.text}>플라스틱 탐지기</Text.H2>
         <Text.Tertiary style={styles.text}>
-          {t("INTRO_SCREEN_CONTINUE_AND_ACCEPT_TERMS_OF_USE")}
+          앱 사용을 위해서는 이용약관에 동의하셔야합니다.
         </Text.Tertiary>
         <TouchableOpacity
           onPress={() => WebBrowser.openBrowserAsync("http://nmf.earth/terms-of-use.pdf")}
         >
-          <Text.Tertiary green>{t("INTRO_SCREEN_TERMS_OF_USE")}</Text.Tertiary>
+          <Text.Tertiary green>이용약관 보기</Text.Tertiary>
         </TouchableOpacity>
         <View style={styles.buttonView}>
           <Button.Primary fullWidth onPress={onPress} textType={"Primary"}>
             <Text.Primary white center bold>
-              {t("INTRO_SCREEN_I_AGREE")}
+              이용약관에 동의하고 시작하기
             </Text.Primary>
           </Button.Primary>
         </View>
