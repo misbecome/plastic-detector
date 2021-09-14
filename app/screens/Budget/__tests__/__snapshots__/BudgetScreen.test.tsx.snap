@@ -10,30 +10,6 @@ exports[`BudgetScreen renders correctly 1`] = `
     }
   }
 >
-  <View>
-    <ProgressChart
-      isMonth={true}
-    />
-    <Button.Primary
-      fullWidth={true}
-      onPress={[Function]}
-      style={
-        Object {
-          "marginVertical": 6,
-        }
-      }
-      textType="Primary"
-    >
-      <Text.Primary
-        bold={true}
-        center={true}
-        white={true}
-      >
-        Set monthly budget
-      </Text.Primary>
-    </Button.Primary>
-    <NumberOfDaysVegetarian />
-    <ProgressChart />
-  </View>
+  <View />
 </RCTScrollView>
 `;

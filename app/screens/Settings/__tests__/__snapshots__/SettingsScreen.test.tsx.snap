@@ -326,46 +326,6 @@ exports[`SettingsScreen renders correctly 1`] = `
         size={14}
       />
     </TouchableOpacity>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-        }
-      }
-    >
-      <Image
-        resizeMode="contain"
-        source={1}
-        style={
-          Object {
-            "width": "50%",
-          }
-        }
-      />
-    </View>
-    <Text.Tertiary
-      bold={true}
-      lightGray={true}
-      style={
-        Object {
-          "marginBottom": 24,
-          "textAlign": "center",
-        }
-      }
-    >
-      Version [missing %{version} value]
-    </Text.Tertiary>
-    <SocialMedia />
   </View>
 </RCTScrollView>
 `;

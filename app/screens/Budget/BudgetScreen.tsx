@@ -30,7 +30,7 @@ const BudgetScreen: NavStatelessComponent = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <ProgressChart
+      {/* <ProgressChart
         isMonth
         totalEmissions={totalCurrentMonthEmissions}
         foodEmissions={foodCurrentMonthEmissions}
@@ -55,11 +55,11 @@ const BudgetScreen: NavStatelessComponent = () => {
         transportEmissions={transportCurrentYearEmissions}
         otherEmissions={otherCurrentYearEmissions}
         monthlyEmissionsBudget={monthlyCarbonBudget}
-      />
+      /> */}
     </ScrollView>
   );
 };
 
-BudgetScreen.navigationOptions = navigationOptions();
+// BudgetScreen.navigationOptions = navigationOptions();
 
 export default BudgetScreen;

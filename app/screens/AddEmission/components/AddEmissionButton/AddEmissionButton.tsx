@@ -30,7 +30,7 @@ const AddEmissionButton: React.FC<Props> = ({ emissionPayload }) => {
     dispatch(emissions.actions.createEmission(emission));
 
     navigation.dispatch(StackActions.popToTop());
-    navigator.openEmissions();
+    //    navigator.openEmissions();
   };
 
   return (

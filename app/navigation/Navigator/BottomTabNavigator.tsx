@@ -3,11 +3,14 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { TabBarIcon } from "components";
-import { t } from "utils";
+// import { t } from "utils";
 import { Colors } from "style";
 
-import ActNavigator from "./BottomTab/ActNavigator";
-import BudgetNavigator from "./BottomTab/BudgetNavigator";
+// import ActNavigator from "./BottomTab/ActNavigator";
+import BudgetScreen from "../../screens/Budget/BudgetScreen";
+import SettingsScreen from "../../screens/Settings/SettingsScreen";
+import AddEmissionScreen from "../../screens/AddEmission/AddEmissionScreen";
+// import BudgetNavigator from "./BottomTab/BudgetNavigator";
 import EmissionsNavigator from "./BottomTab/EmissionsNavigator";
 import SettingsNavigator from "./BottomTab/SettingsNavigator";
 import AddEmissionNavigator from "./BottomTab/AddEmissionNavigator";
@@ -15,28 +18,28 @@ import AddEmissionNavigator from "./BottomTab/AddEmissionNavigator";
 const BottomTab = createBottomTabNavigator();
 
 const BudgetOptions = {
-  tabBarLabel: t("BUDGET_SCREEN_TAB_NAME"),
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-calculator"} />,
+  tabBarLabel: "", //t("BUDGET_SCREEN_TAB_NAME"),
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-time"} />,
 };
 
-const EmissionsOptions = {
-  tabBarLabel: t("EMISSIONS_SCREEN_TAB_NAME"),
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-stats-chart-sharp"} />,
-};
+// const EmissionsOptions = {
+//   tabBarLabel: "", //t("EMISSIONS_SCREEN_TAB_NAME"),
+//   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-stats-chart-sharp"} />,
+// };
 
-const ActOptions = {
-  tabBarLabel: t("ACT_SCREEN_TAB_NAME"),
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-hand-left-sharp"} />,
-};
+// const ActOptions = {
+//   tabBarLabel: t("ACT_SCREEN_TAB_NAME"),
+//   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-hand-left-sharp"} />,
+// };
 
 const SettingsOptions = {
-  tabBarLabel: t("SETTINGS_SCREEN_TAB_NAME"),
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-options"} />,
+  tabBarLabel: "", //t("SETTINGS_SCREEN_TAB_NAME"),
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-menu"} />,
 };
 
 const AddEmissionOptions = {
-  tabBarLabel: t("ADD_EMISSION_SCREEN_TAB_NAME"),
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-add-circle"} />,
+  tabBarLabel: "", //t("ADD_EMISSION_SCREEN_TAB_NAME"),
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name={"md-radio-button-on"} />,
 };
 
 const BottomTabNavigator = (): React.ReactElement => {
@@ -54,26 +57,30 @@ const BottomTabNavigator = (): React.ReactElement => {
         },
       }}
     >
-      <BottomTab.Screen
-        name="BudgetNavigator"
-        options={BudgetOptions}
-        component={BudgetNavigator}
-      />
-      <BottomTab.Screen
+      <BottomTab.Screen name="BudgetNavigator" options={BudgetOptions} component={BudgetScreen} />
+
+      {/* <BottomTab.Screen
         name="EmissionsNavigator"
         options={EmissionsOptions}
         component={EmissionsNavigator}
-      />
+      /> */}
+
       <BottomTab.Screen
         name="AddEmissionNavigator"
         options={AddEmissionOptions}
-        component={AddEmissionNavigator}
+        component={AddEmissionScreen}
       />
-      <BottomTab.Screen name="Act" options={ActOptions} component={ActNavigator} />
+
+      {/* <BottomTab.Screen
+        name="Act"
+        options={ActOptions}
+        component={ActNavigator}
+      /> */}
+
       <BottomTab.Screen
         name="SettingsNavigator"
         options={SettingsOptions}
-        component={SettingsNavigator}
+        component={SettingsScreen}
       />
     </BottomTab.Navigator>
   );

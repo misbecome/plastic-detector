@@ -12,7 +12,7 @@ import { navigate } from "navigation";
 import { NavStatelessComponent } from "interfaces";
 
 import styles from "./SettingsScreen.styles";
-import navigationOptions from "./SettingsScreen.navigationOptions";
+// import navigationOptions from "./SettingsScreen.navigationOptions";
 import quotes from "../../../assets/quotes/quotes.json";
 
 const quoteIndex = Math.floor(Math.random() * Math.floor(quotes.length));
@@ -86,7 +86,7 @@ const SettingsScreen: NavStatelessComponent = () => {
           title={item.title}
         />
       ))}
-      <TouchableWithoutFeedback onPress={() => setSteps(steps + 1)}>
+      {/* <TouchableWithoutFeedback onPress={() => setSteps(steps + 1)}>
         <View style={styles.logoNMFContainer}>
           <Image style={styles.logoNMF} resizeMode="contain" source={ImagesAssets.logos.nmf} />
         </View>
@@ -134,11 +134,11 @@ const SettingsScreen: NavStatelessComponent = () => {
             </Text.Primary>
           </Button.Primary>
         </View>
-      ) : null}
+      ) : null} */}
     </ScrollView>
   );
 };
 
-SettingsScreen.navigationOptions = navigationOptions();
+// SettingsScreen.navigationOptions = navigationOptions();
 
 export default SettingsScreen;
